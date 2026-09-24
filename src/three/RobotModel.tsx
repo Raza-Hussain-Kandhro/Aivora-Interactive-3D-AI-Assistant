@@ -132,7 +132,11 @@ function RiggedRobot({ url, headRef, visorRef, onPoke }: RiggedProps) {
     activeAction.current = next;
   }, [actions, botState]);
 
-  useEffect(() => () => mixer.stopAllAction(), [mixer]);
+  useEffect(() => {
+      return () => {
+        mixer.stopAllAction();
+      };
+    }, [mixer]);
 
   useFrame((state, delta) => {
     const dt = Math.min(delta, 1 / 20);

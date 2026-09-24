@@ -15,16 +15,6 @@ const MODEL_CANDIDATES: string[] = Array.from(
 );
 const MODEL = MODEL_CANDIDATES[0];
 
-function isModelUnavailable(error: unknown): boolean {
-  const msg = (error instanceof Error ? error.message : String(error)).toLowerCase();
-  return (
-    msg.includes("404") ||
-    msg.includes("not_found") ||
-    msg.includes("not found") ||
-    msg.includes("is not supported") ||
-    msg.includes("deprecated")
-  );
-}
 
 export const hasApiKey = Boolean(API_KEY);
 
