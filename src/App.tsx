@@ -85,7 +85,7 @@ export default function App() {
           aria-label="Chat"
           className={`min-h-0 flex-1 ${mobileTab === "chat" ? "block" : "hidden"} md:hidden`}
         >
-          <ChatPanel />
+          <ChatPanel inputId="aivora-input-mobile" />
         </div>
 
         <AnimatePresence initial={false}>
@@ -98,7 +98,11 @@ export default function App() {
               transition={{ duration: 0.26, ease: "easeOut" }}
               className="hidden w-[min(28rem,38vw)] shrink-0 py-4 pr-4 md:block"
             >
-              <ChatPanel collapsible onCollapse={() => setChatOpen(false)} />
+              <ChatPanel
+  inputId="aivora-input-desktop"
+  collapsible
+  onCollapse={() => setChatOpen(false)}
+/>
             </motion.div>
           )}
         </AnimatePresence>

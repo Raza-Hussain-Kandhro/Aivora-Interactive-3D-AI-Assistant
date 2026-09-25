@@ -1,0 +1,442 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for aivora/src/lib/gemini.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">aivora/src/lib</a> gemini.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/83</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/83</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { GoogleGenAI } from "@google/genai";<span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ></span></span></span>
+import type { Message } from "@/types";
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const API_KEY = import.meta.env.VITE_GEMINI_API_KEY?.trim();</span>
+<span class="cstat-no" title="statement not covered" >const MODEL_CANDIDATES: string[] = Array.from(</span>
+<span class="cstat-no" title="statement not covered" >  new Set(</span>
+<span class="cstat-no" title="statement not covered" >    [</span>
+<span class="cstat-no" title="statement not covered" >      import.meta.env.VITE_GEMINI_MODEL?.trim(),</span>
+<span class="cstat-no" title="statement not covered" >      "gemini-flash-latest",</span>
+<span class="cstat-no" title="statement not covered" >      "gemini-3.8-flash",</span>
+<span class="cstat-no" title="statement not covered" >      "gemini-3.5-flash",</span>
+<span class="cstat-no" title="statement not covered" >      "gemini-2.5-flash",</span>
+<span class="cstat-no" title="statement not covered" >    ].filter((m): m is string =&gt; Boolean(m)),</span>
+<span class="cstat-no" title="statement not covered" >  ),</span>
+<span class="cstat-no" title="statement not covered" >);</span>
+<span class="cstat-no" title="statement not covered" >const MODEL = MODEL_CANDIDATES[0];</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >export const hasApiKey = Boolean(API_KEY);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const SYSTEM_INSTRUCTION = `You are Aivora, an embodied 3D AI assistant rendered as a friendly metallic robot.</span>
+You are warm, concise and precise. Use Markdown: short paragraphs, bullet lists and fenced code blocks with language tags.
+Keep answers under ~180 words unless the user asks for depth. Never mention that you are a language model.`;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const client = API_KEY ? new GoogleGenAI({ apiKey: API_KEY }) : null;</span>
+&nbsp;
+type HistoryTurn = { role: "user" | "model"; parts: [{ text: string }] };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >function toHistory(messages: Message[]): HistoryTurn[] {</span>
+<span class="cstat-no" title="statement not covered" >  return messages</span>
+<span class="cstat-no" title="statement not covered" >    .filter((m) =&gt; m.text.trim().length &gt; 0 &amp;&amp; !m.error)</span>
+<span class="cstat-no" title="statement not covered" >    .slice(-16)</span>
+<span class="cstat-no" title="statement not covered" >    .map((m) =&gt; ({</span>
+<span class="cstat-no" title="statement not covered" >      role: m.sender === "user" ? ("user" as const) : ("model" as const),</span>
+<span class="cstat-no" title="statement not covered" >      parts: [{ text: m.text }] as [{ text: string }],</span>
+<span class="cstat-no" title="statement not covered" >    }));</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+&nbsp;
+export type StreamHandlers = {
+  onChunk: (text: string) =&gt; void;
+  signal?: AbortSignal;
+};
+&nbsp;
+/**
+ * Streams a Gemini response chunk-by-chunk.
+ * Falls back to a deterministic mock stream when no API key is configured,
+ * so the whole experience (states, TTS, visor glow) still works offline.
+ */
+<span class="cstat-no" title="statement not covered" >export async function streamAssistantReply(</span>
+<span class="cstat-no" title="statement not covered" >  history: Message[],</span>
+<span class="cstat-no" title="statement not covered" >  prompt: string,</span>
+<span class="cstat-no" title="statement not covered" >  { onChunk, signal }: StreamHandlers,</span>
+<span class="cstat-no" title="statement not covered" >): Promise&lt;string&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  if (!client) return mockStream(prompt, onChunk, signal);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  const contents: HistoryTurn[] = [</span>
+<span class="cstat-no" title="statement not covered" >    ...toHistory(history),</span>
+<span class="cstat-no" title="statement not covered" >    { role: "user", parts: [{ text: prompt }] },</span>
+<span class="cstat-no" title="statement not covered" >  ];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  const stream = await client.models.generateContentStream({</span>
+<span class="cstat-no" title="statement not covered" >    model: MODEL,</span>
+<span class="cstat-no" title="statement not covered" >    contents,</span>
+<span class="cstat-no" title="statement not covered" >    config: {</span>
+<span class="cstat-no" title="statement not covered" >      systemInstruction: SYSTEM_INSTRUCTION,</span>
+<span class="cstat-no" title="statement not covered" >      temperature: 0.8,</span>
+<span class="cstat-no" title="statement not covered" >      maxOutputTokens: 1024,</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+<span class="cstat-no" title="statement not covered" >  });</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  let full = "";</span>
+<span class="cstat-no" title="statement not covered" >  for await (const chunk of stream) {</span>
+<span class="cstat-no" title="statement not covered" >    if (signal?.aborted) break;</span>
+<span class="cstat-no" title="statement not covered" >    const text = chunk.text ?? "";</span>
+<span class="cstat-no" title="statement not covered" >    if (!text) continue;</span>
+<span class="cstat-no" title="statement not covered" >    full += text;</span>
+<span class="cstat-no" title="statement not covered" >    onChunk(text);</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (!full.trim()) throw new Error("Gemini returned an empty response.");</span>
+<span class="cstat-no" title="statement not covered" >  return full;</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+&nbsp;
+/* ------------------------------------------------------------------ *
+ * Graceful mock fallback (PRD 2.1 — "graceful mock fallback")
+ * ------------------------------------------------------------------ */
+<span class="cstat-no" title="statement not covered" >function mockReplyFor(prompt: string): string {</span>
+<span class="cstat-no" title="statement not covered" >  const p = prompt.toLowerCase();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (p.includes("code") || p.includes("react") || p.includes("three")) {</span>
+<span class="cstat-no" title="statement not covered" >    return `Great question — here's the core idea.\n\nThe head bone is damped toward the pointer every frame:\n\n\`\`\`tsx\nuseFrame((state, delta) =&gt; {\n  head.rotation.y = THREE.MathUtils.damp(head.rotation.y, state.pointer.x * 0.6, 4, delta)\n  head.rotation.x = THREE.MathUtils.damp(head.rotation.x, state.pointer.y * 0.4, 4, delta)\n})\n\`\`\`\n\nDamping keeps the motion smooth and frame-rate independent. 🎉`;</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (p.includes("who") || p.includes("you")) {</span>
+<span class="cstat-no" title="statement not covered" >    return `I'm **Aivora** — an interactive 3D assistant.\n\n- I *listen* while you type or speak\n- I *think* while your request streams\n- I *speak* with a visor that pulses to my voice\n\nAdd a \`VITE_GEMINI_API_KEY\` to connect me to a live model. Right now I'm running in mock mode.`;</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return `I'm currently in **mock mode** because no Gemini API key is configured.\n\nEverything else is live: state machine, animation cross-fading, speech synthesis and the visor glow.\n\n1. Copy \`.env.example\` to \`.env\`\n2. Set \`VITE_GEMINI_API_KEY\`\n3. Restart the dev server\n\nThen ask me anything for real answers. ✅`;</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >async function mockStream(</span>
+<span class="cstat-no" title="statement not covered" >  prompt: string,</span>
+<span class="cstat-no" title="statement not covered" >  onChunk: (text: string) =&gt; void,</span>
+<span class="cstat-no" title="statement not covered" >  signal?: AbortSignal,</span>
+<span class="cstat-no" title="statement not covered" >): Promise&lt;string&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  const reply = mockReplyFor(prompt);</span>
+<span class="cstat-no" title="statement not covered" >  const tokens = reply.match(/\S+\s*/g) ?? [reply];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  await new Promise((r) =&gt; setTimeout(r, 600)); // simulated latency → 'thinking'</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  let full = "";</span>
+<span class="cstat-no" title="statement not covered" >  for (const token of tokens) {</span>
+<span class="cstat-no" title="statement not covered" >    if (signal?.aborted) break;</span>
+<span class="cstat-no" title="statement not covered" >    full += token;</span>
+<span class="cstat-no" title="statement not covered" >    onChunk(token);</span>
+<span class="cstat-no" title="statement not covered" >    await new Promise((r) =&gt; setTimeout(r, 26));</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >  return full;</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-25T11:55:00.011Z
+            </div>
+        <script src="../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
+    </body>
+</html>
+    

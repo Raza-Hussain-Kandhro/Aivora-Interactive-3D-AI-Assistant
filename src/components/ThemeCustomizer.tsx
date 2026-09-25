@@ -200,7 +200,7 @@ export function ThemeCustomizer() {
                   <Trash2 size={14} /> Clear history
                 </button>
               </div>
-              <p className="mt-2 text-[11px] text-white/35">
+              <p className="mt-2 text-[11px] text-white/70">
                 {messages.length} message{messages.length === 1 ? "" : "s"}{" "}
                 saved locally
               </p>

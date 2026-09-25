@@ -21,9 +21,9 @@ export function Viewport() {
           <Boxes size={17} />
         </span>
         <div>
-          <p className="text-sm font-semibold leading-tight text-white">
-            Aivora
-          </p>
+          <h1 className="text-sm font-semibold leading-tight text-white">
+  Aivora
+</h1>
           <p className="text-[11px] leading-tight text-white/55">
             Interactive 3D AI Assistant
           </p>
@@ -58,7 +58,7 @@ export function Viewport() {
       </div>
 
       {/* interaction hint */}
-      <p className="pointer-events-none absolute bottom-5 right-4 z-10 hidden max-w-[16rem] text-right text-[11px] leading-snug text-white/40 lg:block">
+      <p className="pointer-events-none absolute bottom-5 right-4 z-10 hidden max-w-[16rem] text-right text-[11px] leading-snug text-white/70 lg:block">
         Drag to orbit · scroll to zoom · click the head or chest core for a
         reaction
       </p>

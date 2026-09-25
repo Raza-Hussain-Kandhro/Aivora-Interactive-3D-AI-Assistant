@@ -15,9 +15,17 @@ const SUGGESTIONS = [
   "Give me 3 UI ideas for a 3D assistant",
 ];
 
-type Props = { onCollapse?: () => void; collapsible?: boolean };
+type Props = {
+  inputId: string;
+  onCollapse?: () => void;
+  collapsible?: boolean;
+};
 
-export function ChatPanel({ onCollapse, collapsible = false }: Props) {
+export function ChatPanel({
+  inputId,
+  onCollapse,
+  collapsible = false,
+}: Props) {
   const messages = useAppStore((s) => s.messages);
   const isStreaming = useAppStore((s) => s.isStreaming);
   const addMessage = useAppStore((s) => s.addMessage);
@@ -236,11 +244,12 @@ export function ChatPanel({ onCollapse, collapsible = false }: Props) {
       </div>
 
       <ChatInput
-        onSend={(text) => void send(text)}
-        micSupported={micSupported}
-        micError={micError}
-        onToggleMic={toggleMic}
-      />
+  inputId={inputId}
+  onSend={(text) => void send(text)}
+  micSupported={micSupported}
+  micError={micError}
+  onToggleMic={toggleMic}
+/>
     </section>
   );
 }

@@ -4,6 +4,7 @@ import { Loader2, Mic, MicOff, Send } from "lucide-react";
 import { useAppStore } from "@/store/useAppStore";
 
 type Props = {
+  inputId: string;
   onSend: (text: string) => void;
   micSupported: boolean;
   micError: string | null;
@@ -11,6 +12,7 @@ type Props = {
 };
 
 export function ChatInput({
+  inputId,
   onSend,
   micSupported,
   micError,
@@ -77,13 +79,13 @@ export function ChatInput({
           {micSupported ? <Mic size={18} /> : <MicOff size={18} />}
         </button>
 
-        <label className="sr-only" htmlFor="aivora-input">
-          Message Aivora
-        </label>
+        <label className="sr-only" htmlFor={inputId}>
+  Message Aivora
+</label>
         <textarea
-          id="aivora-input"
-          ref={textareaRef}
-          rows={1}
+  id={inputId}
+  ref={textareaRef}
+  rows={1}
           value={draft}
           placeholder={isRecording ? "Listening…" : "Ask Aivora anything…"}
           onChange={(e) => {
@@ -123,7 +125,7 @@ export function ChatInput({
         </button>
       </div>
 
-      <p className="mt-2 px-1 text-[11px] text-white/35">
+      <p className="mt-2 px-1 text-[11px] text-white/70">
         Enter to send · Shift + Enter for a new line
       </p>
     </div>
